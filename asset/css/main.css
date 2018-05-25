@@ -1,0 +1,21 @@
+body{
+    background-color: darkgreen;
+}
+h1{
+    text-align: center;
+}
+
+img:hover{
+    border: dashed;
+    border-color: darkblue;
+}
+.active{
+    border: groove;
+    border-color: darkblue;
+}
+.more :first-child{
+    width: 100%;
+}
+ .b2b, .more{
+     display: none;
+ }

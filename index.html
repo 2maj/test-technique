@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="asset/css/main.css" rel="stylesheet">
+    <link href="asset/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <title>Test technique</title>
+</head>
+<body>
+    <div class="target" id="target">
+        <h1>Parlez nous de votre</h1>
+        <label>Cible</label>
+        <div class="row factory" id="factory">
+            <img src="https://assistant.getasound.com/assets/factory.png" onclick="factory(this)">
+            <img src="https://assistant.getasound.com/assets/factory.png"onclick="factory(this)">
+        </div>
+    </div>
+    <div class="b2b" id="b2b">
+        <label>B2B</label>
+        <img src="https://assistant.getasound.com/assets/boy.png" onclick="b2b(this)">
+        <img src="https://assistant.getasound.com/assets/boy.png" onclick="b2b(this)">
+        <img src="https://assistant.getasound.com/assets/boy.png" onclick="b2b(this)">
+        <img src="https://assistant.getasound.com/assets/boy.png" onclick="b2b(this)">
+    </div>
+    <div class="col-lg-10 col-md-8 col-xl-5 more" id="more">
+        <p id="count">5</p>
+        <textarea id="texte" maxlength="5"></textarea>
+        <p id="display"></p>
+    </div>
+    <script>
+        var count = document.getElementById('count');
+        var N = count.textContent;
+        console.log(count.textContent);
+        var texte =document.querySelector('#texte');
+            texte.addEventListener('keyup', function (e) {
+            //console.log(e.key.charCodeAt());
+            if(count.textContent >0 &&(e.key !== 'Backspace' && (e.key.charCodeAt()>31 && e.key.charCodeAt()<127))){
+                count.textContent -= 1;
+               // console.log("Without backspace "+texte.value.length);
+            }
+            if(count.textContent > 0){
+                texte.style.backgroundColor = '';
+            }else{
+                texte.style.backgroundColor = 'red';
+            }
+
+            if(count.textContent<N && (e.key === 'Backspace')){
+                count.textContent = parseInt(count.textContent) + 1;
+               // console.log("With backspace "+texte.value.length);
+            }
+
+        })
+    </script>
+    <script src="asset/js/main.js"></script>
+    <script src="asset/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
