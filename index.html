@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="asset/css/main.css" rel="stylesheet">
-    <link href="asset/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <title>Test technique</title>
 </head>
 <body>
-    <div class="target" id="target">
+    <div class="container target" id="target">
         <h1>Parlez nous de votre</h1>
         <label>Cible</label>
         <div class="row factory" id="factory">
-            <img src="https://assistant.getasound.com/assets/factory.png" onclick="factory(this)">
+            <a class="col-4"><img src="https://assistant.getasound.com/assets/factory.png" onclick="factory(this)"></a>
             <img src="https://assistant.getasound.com/assets/factory.png"onclick="factory(this)">
         </div>
     </div>
@@ -22,7 +22,7 @@
         <img src="https://assistant.getasound.com/assets/boy.png" onclick="b2b(this)">
         <img src="https://assistant.getasound.com/assets/boy.png" onclick="b2b(this)">
     </div>
-    <div class="col-lg-10 col-md-8 col-xl-5 more" id="more">
+    <div class="col-10 more" id="more">
         <p id="count">5</p>
         <textarea id="texte" maxlength="5"></textarea>
         <p id="display"></p>
@@ -51,7 +51,7 @@
 
         })
     </script>
-    <script src="asset/js/main.js"></script>
-    <script src="asset/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
