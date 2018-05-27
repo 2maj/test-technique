@@ -1,13 +1,24 @@
 body{
-    background-color: darkgreen;
+    margin: 5em;
+    font-family: Roboto;
+
 }
 h1{
     text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+}
+label{
+    font-size: 18px;
+    font-weight: bold;
+}
+figure{
+    display: inline-block;
 }
 
-img:hover{
+figure:hover{
     border: dashed;
-    border-color: darkblue;
+    //border-color: darkblue;
 }
 .active{
     border: groove;
@@ -16,6 +27,13 @@ img:hover{
 .more :first-child{
     width: 100%;
 }
- .b2b, .more{
+ .b2b, .b2c, .more{
      display: none;
+ }
+ p{
+     display: flex;
+     justify-content: flex-end;
+ }
+ textarea{
+     width: 100%;
  }
