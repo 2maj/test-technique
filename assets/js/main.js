@@ -48,7 +48,6 @@ function b2c(id) {
 
 var count = document.getElementById('count');
 var N = parseInt(count.textContent.split(' ')[0]);
-//console.log(N);
 var texte =document.querySelector('#texte');
 texte.addEventListener('keyup', function (e) {
     let nb=parseInt(count.textContent.split(' ')[0]);
@@ -75,21 +74,3 @@ texte.addEventListener('keypress', function (e) {
     }
 
 });
-
-/**** Process Responsive images when resized ****/
-
-var widthWindow = parseInt(window.innerWidth); //initial window width
-
-window.onresize = function(){
-    let newWidth = parseInt(window.innerWidth);//resized window width
-    console.log('New width: '+newWidth+' Last width: '+widthWindow);
-    let resize = parseInt(1-(newWidth/widthWindow)); // Calcultion of pourcent resized
-    //console.log(resize);
-    let img = document.querySelectorAll('img');//get all img
-    for(let i=0; i<img.length; i++){
-        let x = parseInt(img[i].style.width)*resize;
-        img[i].style.width = x+"px";
-        console.log(x);
-    }
-    widthWindow = newWidth;
-};
